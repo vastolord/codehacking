@@ -18,3 +18,11 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('ez',function (){
+
+    return view('admin.index');
+
+});
+
+Route::resource('admin/user','AdminUsersController');
