@@ -25,4 +25,10 @@ Route::get('ez',function (){
 
 });
 
-Route::resource('admin/user','AdminUsersController');
+
+Route::group(['middleware'=>'admin'], function(){
+
+    Route::resource('admin/user','AdminUsersController');
+
+});
+
