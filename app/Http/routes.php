@@ -21,7 +21,7 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('ez',function (){
 
-    return view('admin.index');
+    return view('index');
 
 });
 
@@ -29,6 +29,7 @@ Route::get('ez',function (){
 Route::group(['middleware'=>'admin'], function(){
 
     Route::resource('admin/user','AdminUsersController');
+    Route::resource('admin/post','AdminPostsController');
 
 });
 
